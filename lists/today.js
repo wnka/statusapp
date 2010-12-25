@@ -17,9 +17,6 @@ function(head, req) {
         var stash = {
             title : today.toDateString(),
             scripts : {},
-            db : req.path[0],
-            design : req.path[2],
-            assets : path.asset(),
             posts : List.withRows(function(row) {
                 var post = row.value;
                 var d = new Date(Date.parse(post.created_at));
