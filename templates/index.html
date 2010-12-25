@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="../../style/screen.css" type="text/css"/>
+  </head>
+  <body>
+    <div id="content">
+      <h1>Recently...</h1>
+      <ul id="posts">
+        {{#posts}}
+          <li>
+            {{ time }} - {{ text }}
+          </li>
+        {{/posts}}
+    </ul>
+  </div>
+</body>
+{{>scripts}}
+</script>
+</html>
