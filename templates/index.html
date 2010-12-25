@@ -6,16 +6,16 @@
   </head>
   <body>
     <div id="content">
-      <h1>I did stuff ({{ title }})</h1>
+      <h1>I did stuff - {{ title }}</h1>
       <ul id="posts">
         {{#posts}}
           <li>
             {{ time }} - {{ text }}
           </li>
         {{/posts}}
-    </ul>
-  </div>
-</body>
-{{>scripts}}
+      </ul>
+    </div>
+  </body>
+  {{>scripts}}
 </script>
 </html>
