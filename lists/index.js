@@ -34,4 +34,16 @@ function(head, req) {
         }
         return Mustache.to_html(ddoc.templates.index, stash, ddoc.templates.partials, List.send);
     });
+
+  provides("text", function() {    
+      var row;
+      while (row = getRow()) {
+          var post = row.value;
+          var d = new Date(Date.parse(post.created_at));
+          var timeString = padDigit(d.getHours()) + ":" + padDigit(d.getMinutes());
+          var entry = timeString + " ==> " + post.text + "\n";
+          send(entry);
+      }
+  });
+
 };
