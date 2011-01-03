@@ -1,0 +1,8 @@
+* What is this?
+
+A simple app for storing simple status updates.  I mainly wanted to play around with CouchDB and
+CouchApps, so I wrote something you could easily interact with from the command line and dump status
+updates into.
+
+This is just for my goofing around with CouchDB.  If you want to use any of the code for some
+strange reason, go ahead.  It's public domain.
