@@ -23,10 +23,9 @@ function(head, req) {
             title : today.getTime(),
             scripts : {},
             posts : List.withRows(function(row) {
-                var post = row.value;
                 return {
-                    time : post.created_at,
-                    text : post.text
+                    time : row.key,
+                    text : row.value
                 }
             })
         }
