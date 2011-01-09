@@ -20,9 +20,6 @@ class Status(Document):
     created_at = StringProperty()
 
 utc = UTC()
-now = datetime.datetime.utcnow()
-now = now.replace(tzinfo=utc)
-print now.astimezone(utc).strftime("%a %b %d %H:%M:%S %Z %Y")
 
 username = "user"
 password = "pass"
@@ -33,12 +30,16 @@ db = server.get_or_create_db("statusapp")
 
 Status.set_db(db)
 
-statusText = raw_input("> ")
+while(1):
+    statusText = raw_input("> ")
+    
+    now = datetime.datetime.utcnow()
+    now = now.replace(tzinfo=utc)
 
-status = Status(
-    text = statusText,
-    isWork = "false",
-    type = "status",
-    created_at = now.strftime("%a %b %d %H:%M:%S %Z %Y"))
-
-status.save()
+    status = Status(
+        text = statusText,
+        isWork = "false",
+        type = "status",
+        created_at = now.strftime("%a %b %d %H:%M:%S %Z %Y"))
+    
+    status.save()
