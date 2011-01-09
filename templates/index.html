@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>{{ title }}</title>
+    <title>I do things</title>
     <link rel="stylesheet" href="../../style/screen.css" type="text/css"/>
   </head>
   <body>
@@ -20,10 +20,11 @@
       {
          var d = new Date(date);
          document.write(d.toDateString());
+         document.title = d.toDateString();
       }
     </script>
     <div id="content">
-      <h1>I did stuff - <script type="text/javascript"> dateWrite({{ title }});</script></h1>
+      <h1>I did stuff - <script type="text/javascript">dateWrite({{ title }});</script></h1>
       <ul id="posts">
         {{#posts}}
           <li>
