@@ -5,7 +5,7 @@ function(doc) {
         var today = new Date(now.getFullYear(), now.getMonth(), now.getDate()); 
 
         if (date >= today.getTime()) {
-            emit(date, {created_at: doc.created_at, text: doc.text});
+            emit(date, {created_at: date, text: doc.text});
 	    }
     }
 }

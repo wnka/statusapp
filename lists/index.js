@@ -4,7 +4,7 @@ function(head, req) {
     var List = require("vendor/couchapp/lib/list");
     var path = require("vendor/couchapp/lib/path").init(req);
     var Atom = require("vendor/couchapp/lib/atom");
-
+    
     var indexPath = path.list('today','today_status',{descending:false});
 
     var path_parts = req.path;
@@ -20,14 +20,12 @@ function(head, req) {
         var today = new Date();
         // render the html head using a template
         var stash = {
-            title : today.toDateString(),
+            title : today.getTime(),
             scripts : {},
             posts : List.withRows(function(row) {
                 var post = row.value;
-                var d = new Date(Date.parse(post.created_at));
-                var timeString = padDigit(d.getHours()) + ":" + padDigit(d.getMinutes());
                 return {
-                    time : timeString,
+                    time : post.created_at,
                     text : post.text
                 }
             })

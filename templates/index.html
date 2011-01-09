@@ -5,12 +5,29 @@
     <link rel="stylesheet" href="../../style/screen.css" type="text/css"/>
   </head>
   <body>
+    <script type="text/javascript"> 
+      var padDigit = function(val) {
+          return (val < 10 ? "0" : "") + val;
+      }
+
+      var timeWrite = function(date) 
+      { 
+         var d = new Date(date);
+         document.write(padDigit(d.getHours()) + ":" + padDigit(d.getMinutes())); 
+      } 
+
+      var dateWrite = function(date)
+      {
+         var d = new Date(date);
+         document.write(d.toDateString());
+      }
+    </script>
     <div id="content">
-      <h1>I did stuff - {{ title }}</h1>
+      <h1>I did stuff - <script type="text/javascript"> dateWrite({{ title }});</script></h1>
       <ul id="posts">
         {{#posts}}
           <li>
-            {{ time }} - {{ text }}
+            <script type="text/javascript"> timeWrite({{ time }}); </script> - {{ text }}
           </li>
         {{/posts}}
       </ul>
