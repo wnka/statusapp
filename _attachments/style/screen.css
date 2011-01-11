@@ -27,9 +27,12 @@ a {
 }
 
 h1 {
-  padding:6px;
+  padding:10px;
+  padding-left:30px;
   margin:0;
   line-height:1.2em;
+  background:#000000;
+  color:#fff;
 }
 
 h2 {
@@ -67,12 +70,14 @@ h4 {
 }
 
 #content {
-  width:700px;
   padding:10px;
-  background:#f9f9f9;
+  padding-top:20px;
+  background:#E0F0F9;
 /*  float:left;*/
   margin-top:0;
-  margin-left:240px;
+  margin-left:75px;
+  margin-right:75px;
+  height: 100%;
 }
 
 #tagcloud {

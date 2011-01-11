@@ -23,8 +23,8 @@
          document.title = d.toDateString();
       }
     </script>
+    <h1>I did stuff - <script type="text/javascript">dateWrite({{ title }});</script></h1>
     <div id="content">
-      <h1>I did stuff - <script type="text/javascript">dateWrite({{ title }});</script></h1>
       <ul id="posts">
         {{#posts}}
           <li>
