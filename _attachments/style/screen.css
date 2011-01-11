@@ -1,9 +1,9 @@
 body {
-  font: 1.2em Georgia, serif;
+  font-family: Cantarell, 'Lucida Sans', 'Lucida Grande', Lucida, sans-serif;
   line-height:1.2em;
   margin:0;
   padding:0;
-  
+  color: #333;
 }
 
 #profile {
@@ -27,11 +27,13 @@ a {
 }
 
 h1 {
+  font-family: Georgia, serif;
   padding:10px;
   padding-left:30px;
   margin:0;
   line-height:1.2em;
-  background:#000;
+  background:#333;
+  border-bottom: 2px solid yellow;
   color:#fff;
 }
 
@@ -75,9 +77,17 @@ h4 {
   background:#E0F0F9;
 /*  float:left;*/
   margin-top:0;
-  margin-left:75px;
-  margin-right:75px;
+  margin-left:50px;
+  margin-right:50px;
   height: 100%;
+}
+
+#time {
+  background: #333;
+  color: white;
+  font-family: courier;
+  font-weight: bold;
+  padding: 4px;
 }
 
 #tagcloud {

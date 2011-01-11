@@ -28,7 +28,7 @@
       <ul id="posts">
         {{#posts}}
           <li>
-            <script type="text/javascript"> timeWrite({{ time }}); </script> - {{ text }}
+            <span id="time"><script type="text/javascript"> timeWrite({{ time }}); </script></span> - {{ text }}
           </li>
         {{/posts}}
       </ul>
